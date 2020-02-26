@@ -96,6 +96,13 @@
 		SET hit = hit+1
 		WHERE b_idx = #{no}
 	</update>
+	
+	<!-- 로그인 도현-->
+	<select id="login" parameterType="java.util.Map"
+	resultType="mybatis.vo.MemVO">
+		SELECT * FROM member_t
+		WHERE m_id = #{id} AND m_pw = #{pw}
+	</select>
 
 </mapper>
 
